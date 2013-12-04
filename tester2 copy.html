@@ -29,6 +29,7 @@
       body {
         background: url(http://bottlehands.files.wordpress.com/2010/05/fresh_ramen_noodle.jpg);
         background-size:80px 60px;
+        background-attachment: fixed;
         background-repeat:no-repeat;
         background-color: #a7d3ff; 
       }
@@ -83,8 +84,7 @@
         display: inline-block;
         float: left;
       }
-      
-      /*.assignments {
+      .assignments {
         display: inline-block;
         float: right;
         text-align: right;
@@ -93,13 +93,38 @@
         color: black;
         float: right;
         text-align: right;
-      }*/
+      }
+      .left {
+        padding-left: 10px;
+        height: 300px;
+        width: 550px;
+        margin-left: 10px;
+        border: 2px solid #ccd1d6;
+        border-radius: 10px;
+        background-color: #ccd1d6;
+        display: inline-block;
+      }
+      
+      .right{
+        height: 300px;
+        width: 300px;
+        padding-right: 10px;
+        margin-left: 390px;
+        margin-right: 10px;
+        border: 2px solid #ccd1d6;
+        border-radius: 10px;
+        background-color: #ccd1d6;
+        display: inline-block;
+      }
+      .bottom{
+        clear: both;
+      }
     </style>
   </head>
   
   <body>
     <!-- Navigation bar --> 
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -146,6 +171,7 @@
               <li class="divider"></li>
               <li><a href="#">Logout</a></li>
             </ul>
+            <!-- <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">{{name}}</a></p> -->
           </li>
         </ul>
       </div><!-- /.navbar-collapse -->
@@ -154,48 +180,63 @@
     <div class="container">
       <div class="starter-template">
         <h1>Noodle</h1>
-        <p class="lead">Heyyy testing Heyyy testing Heyyy testing Heyyy testing Heyy testing Heyyy testing Heyyy testing</p>
+        <p class="lead">Welcome to Noodle! Enjoy your stay, and remember to login for access to many wonderful Noodle features.</p>
       </div>
     </div><!-- /.container -->
-    <div class="time">
-      <h2 class="time">
-        The local time is - {{localtime}}
-      </h2>
-      <br />
-      <h2 class="time">
-        The current block is: Block {{block}}
-      </h2>
-      <br />
-      <h2 class="time">
-        Time remaining- {{tremain}}
-      </h2>
+    <div class="left">
+      <div class="time">
+        <h2 class="time">
+          The local time is - {{localtime}}
+        </h2>
+        <br />
+        <h2 class="time">
+          The current block is: Block {{block}}
+        </h2>
+        <br />
+        <h2 class="time">
+          Time remaining- {{tremain}}
+        </h2>
+      </div>
     </div>
-    <div class="assignments">
-      <h3 class="assignments">
-        <u>Current Assignments</u>
-      </h3>
-      <br /> <br />
-      <h3 class="assignments" id="diffcolor">
-        --
-      </h3>
-      <br /> <br />
-      <h3 class="assignments" id="diffcolor">
-        --
-      </h3>
-      <br /> 
-      <h3 class="assignments" id="diffcolor">
-        --
-      </h3>
-      <br />
-      <h3 class="assignments" id="diffcolor">
-        --
-      </h3>
-      <br />
-      <h3 class="assignments" id="diffcolor">
-        --
-      </h3>
+    <div class="right">
+      <div class="assignments">
+        <h3 class="assignments">
+          <u>Current Assignments</u>
+        </h3>
+        <br /> <br />
+        <h3 class="assignments" id="diffcolor">
+          --
+        </h3>
+        <br /> <br />
+        <h3 class="assignments" id="diffcolor">
+          --
+        </h3>
+        <br /> 
+        <h3 class="assignments" id="diffcolor">
+          --
+        </h3>
+        <br />
+        <h3 class="assignments" id="diffcolor">
+          --
+        </h3>
+        <br />
+        <h3 class="assignments" id="diffcolor">
+          --
+        </h3>
+      </div>
     </div>
-    
+    <p class="bottom">
+      Here's some more text, the calendar will go just above this, and just below the two div boxes for the assignments and the current block. This is testing to make sure that the fixed navbar works.
+    </p>
+    <p class="bottom">
+      Here's some more text, the calendar will go just above this, and just below the two div boxes for the assignments and the current block. This is testing to make sure that the fixed navbar works.
+    </p>
+    <p class="bottom">
+      Here's some more text, the calendar will go just above this, and just below the two div boxes for the assignments and the current block. This is testing to make sure that the fixed navbar works.
+    </p>
+    <p class="bottom">
+      Here's some more text, the calendar will go just above this, and just below the two div boxes for the assignments and the current block. This is testing to make sure that the fixed navbar works.
+    </p>
     <!-- Boostrap core JavaScript
     ======================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
